@@ -1,0 +1,4 @@
+Adi|134|656565|abcdef
+xyx|121|767667|jfgshf
+abc|136|675460|jkdfgl
+def|023|437584|jdsfgj

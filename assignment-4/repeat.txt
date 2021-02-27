@@ -1,0 +1,16 @@
+Adi|134|656565|abcdef
+xyx|121|767667|jfgshf
+abc|136|675460|jkdfgl
+def|023|437584|jdsfgj
+Adi|133|656565|abcdef
+xyx|122|767667|jfgshf
+abc|134|675460|jkdfgl
+def|023|437584|jdsfgj
+Adi|123|656565|abcdef
+xyx|046|767667|jfgshf
+abc|085|675460|jkdfgl
+def|022|437584|jdsfgj
+Adi|999|656565|abcdef
+xyx|111|767667|jfgshf
+abc|000|675460|jkdfgl
+def|333|437584|jdsfgj
