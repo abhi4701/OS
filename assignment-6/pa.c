@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <string.h>
 
 int main(){
     int fd[2];
     // fd[1] = write;
     // fd[0] = read;
 
-    char glob[50] = "Char";
     if(pipe(fd) == -1){
         printf("Error\n");
     }
@@ -23,13 +23,14 @@ int main(){
         close(fd[1]);
     }
     else{
+        char glob[50] = "After Concatination: ";
         printf("I am parent: chlidId -> %d and pid -> %d\n", id, getpid());
         close(fd[1]);
         char got[50];
         read(fd[0], got, sizeof(got));
         close(fd[0]);
         strcat(glob, got);
-        printf("Got from chlid process: %s\n", got);
+        printf("Got from chlid process: %s\n", glob);
         
     }
 

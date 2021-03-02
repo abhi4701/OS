@@ -8,7 +8,7 @@
 
 int main(){
     printf("Process 2\n");
-    char str[2][50];
+    char str[20][50000];
 
     int fd = open("test", O_RDONLY);
 
@@ -17,8 +17,8 @@ int main(){
     }
     int i;
     for(int i = 0; i < 2; i++){
-      read(fd, str + i, sizeof(str + i));
-      printf("Got from file: %s\n", *(str + i));
+      read(fd, str + i, sizeof(str[i]));
+      printf("Copied form process1\n");
     }
     close(fd);
     (strcmp(str[0], str[1]) == 0) ? printf("Same\n") : printf("Not Same\n");

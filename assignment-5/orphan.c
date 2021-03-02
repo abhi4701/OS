@@ -3,21 +3,24 @@
 #include <unistd.h>
 #include <sys/types.h>
 
-int main(){
+int main()
+{
     int id;
     id = fork();
-    if(id == 0){
+    if (id == 0)
+    {
         //sleep(10);
         printf("I am child and have PID = %d\n", getpid());
         printf("My parent have PPID = %d\n", getppid());
         printf("i am orphan\n");
-        sleep(10);
+        sleep(2);
         printf("Now My parent is : %d", getppid());
     }
-    else{
+    else
+    {
         printf("I am parent and have PID = %d\n", getpid());
         printf("My child have PID = %d\n", id);
-        sleep(2);
+        sleep(20);
         printf("Parent killed\n");
     }
     return 0;

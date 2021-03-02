@@ -10,8 +10,8 @@ int main(){
     char str[2][50];
 
     printf("Enter the strings\n");
-    scanf("%s", str[0]);
-    scanf("%s", str[1]);
+    scanf("%[^\n]%*c", str[0]);
+    scanf("%[^\n]%*c", str[1]);
 
     int fd = open("test", O_WRONLY);
     if(fd == -1){
