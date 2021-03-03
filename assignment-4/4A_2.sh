@@ -6,6 +6,6 @@ if [ $# -ne 1 ]
 then
 	echo Error
 else
-	awk '{print toupper($0)}' $file 
+	awk '{print toupper($0)}' $file > upper.txt
 fi
 
